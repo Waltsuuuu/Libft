@@ -1,10 +1,8 @@
-# === CONFIG ===
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 AR = ar
 ARFLAGS = rcs
 
-# === FILES ===
 LIB_NAME = libft.a
 
 SOURCES = \
@@ -15,22 +13,31 @@ SOURCES = \
 	ft_isprint.c \
 	ft_strlen.c \
 	ft_memset.c \
+	ft_bzero.c \
+	ft_memcpy.c \
+	ft_memmove.c \
+	ft_strlcpy.c \
+	ft_strlcat.c \
+	ft_toupper.c \
+	ft_tolower.c \
 
 
 OBJECTS = $(SOURCES:.c=.o)
 
-# === TARGETS ===
 all: $(LIB_NAME)
 
 $(LIB_NAME): $(OBJECTS)
 	$(AR) $(ARFLAGS) $@ $^
 
-# Compile each .c file into a .o file using the pattern rule
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-# Clean up build files
 clean:
+	rm -rf $(OBJECTS)
+
+fclean:
 	rm -rf $(OBJECTS) $(LIB_NAME)
 
-.PHONY: all clean
+re: fclean all
+
+.PHONY: all clean fclean re

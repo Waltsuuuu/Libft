@@ -1,16 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
+/*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/14 15:06:14 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/14 15:40:19 by wheino           ###   ########.fr       */
+/*   Created: 2025-04-16 06:35:28 by wheino            #+#    #+#             */
+/*   Updated: 2025-04-16 06:35:28 by wheino           ###   ########.fi       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include "libft.h"
+
+void	*ft_bzero(void *s, size_t n)
 {
-    return((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'));
+	unsigned char *ptr;
+
+	ptr = (unsigned char *)s;
+
+	while (n--)
+		*ptr++ = 0;
+	return(s);
 }
