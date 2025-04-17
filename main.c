@@ -79,7 +79,26 @@ int main()
 	// ft_strlcat(dest, src, 11);
 	// printf("%s", dest);
 	
-	printf("%c", ft_tolower('S'));
+	// printf("%c", ft_tolower('S'));
 
+	//Strrchr test
+
+	// const char *str = "Hello";
+	// char c = 'c';
+
+	// ft_strrchr(str, c);
+
+	// printf("%s", 	ft_strrchr(str, c));
+
+	// char *big = "Hello dear";
+
+	// char *little = "dear";
+
+	// printf("%s", ft_strnstr(big, little, 9));
+	// printf("%d", strnstr(big, little, 9));
+
+	char *str = "-2147483648";
+
+	printf("%d", ft_atoi(str));
 	return 0;
 }
