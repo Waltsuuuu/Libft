@@ -97,8 +97,41 @@ int main()
 	// printf("%s", ft_strnstr(big, little, 9));
 	// printf("%d", strnstr(big, little, 9));
 
-	char *str = "-2147483648";
+	// char *str = "-2147483648";
 
-	printf("%d", ft_atoi(str));
+	// printf("%d", ft_atoi(str));
+	
+	// int *arr;
+	// int size = 0;
+
+	// arr = ft_calloc(size, sizeof(int));
+	
+	// for(int i = 0; i < 4; i++){
+	// 	printf("%d\n", arr[i]);
+	// }
+	// free(arr);
+
+	// char *str1 = "Hello";
+	// char *str2 = ft_strdup(str1);
+
+	// printf("%s", str2);
+	// char *str1 = "HelloWorld";
+    // char *str2 = ft_substr(str1, 5, 5);
+
+    // printf("%s", str2);
+    // free(str2);
+
+	// char *str1 = "Hello";
+    // char *str2 = "World";
+    // char *joined;
+
+    // joined = ft_strjoin(str1, str2);
+    // printf("%s", joined);
+
+	// char *s1 = "HNOelloWorldHelNOHel";
+    // char *set = "Hel";
+    // char *trimmed = ft_strtrim(s1, set);
+    // printf("%s", trimmed);
+
 	return 0;
 }

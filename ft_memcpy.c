@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
+/*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-16 07:47:27 by wheino            #+#    #+#             */
-/*   Updated: 2025-04-16 07:47:27 by wheino           ###   ########.fi       */
+/*   Created: 2025/04/16 07:47:27 by wheino            #+#    #+#             */
+/*   Updated: 2025/04/22 11:29:56 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char *dest_str;
 	const unsigned char *src_str;
