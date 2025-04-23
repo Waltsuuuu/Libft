@@ -90,7 +90,7 @@ char **ft_split(char const *s, char c)
 
     arr_len = word_count(s, c);
     temp_s = (char *)s;
-    arr = malloc(arr_len * sizeof(arr) + 1);
+    arr = malloc((arr_len + 1) * sizeof(char *));
     if(!arr)
         return(NULL);
     i = 0;
@@ -99,21 +99,32 @@ char **ft_split(char const *s, char c)
         while(*temp_s == c)
             temp_s++;
         arr[i] = fill_word(temp_s, c);
+        if(!arr[i])
+        {
+            while(i >= 0)
+            {
+                free(arr[i]);
+                i--;
+            }
+            free(arr);
+            return(NULL);
+        }
         temp_s = temp_s + ft_strlen(arr[i]) + 1;
         i++;
     }
     arr[i] = NULL;
-    // for (int i = 0; i <= word_count(s, c); i++) {
-    //     printf("Arr word [%d] = %s\n", i, arr[i]);
-    // }
+     for (int i = 0; i <= word_count(s, c); i++) {
+         printf("Arr word [%d] = %s\n", i, arr[i]);
+     }
     return(arr);
 }
 
 int main()
 {
-    char *str = "  One Two Three Four897   ";
-    printf("Word count = %d\n", word_count(str, ' '));
+    char *test_string = "  Hello,\tthis  is a test-string; for:ft_split! Let's see--how it handles   various\t\tseparators and     spaces.  ";
+    char delimiter = ' ';
+    printf("Word count = %d\n", word_count(test_string, delimiter));
 
-    ft_split(str, ' ');
+    ft_split(test_string, ' ');
     return(0);
 }
