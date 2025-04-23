@@ -6,15 +6,9 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:11:11 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/22 17:45:17 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/23 10:13:08 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-// s1 = string to be trimmed
-// set = String containing the char to be removed
-
-// Return copy of s1 - trimmed
-// Return NULL if alloc fails
 
 #include "libft.h"
 #include <stdio.h>
@@ -44,20 +38,3 @@ char *ft_strtrim(char const *s1, char const *set)
     }
     return(trim);
 }
-
-int main()
-{
-    char *s1 = "HNOelloWorldHelNOHel";
-    char *set = "Hel";
-    char *trimmed = ft_strtrim(s1, set);
-    printf("%s", trimmed);
-    return 0;
-}
-
-// Loop s1 from start until char does not match any char in set
-// Get index of last match
-// Strchr 
-// Loop s1 from end until current char does not match any char in set
-// Get inxdex # of last match
-
-
