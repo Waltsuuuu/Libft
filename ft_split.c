@@ -6,26 +6,15 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:13:22 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/23 17:28:13 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/24 16:37:46 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Allocates memory and returns arra of strings obtainned by splitting
-// string s, using the char 'c' as a delimiter.
-// Array must end with a null pointer.
-
-// Parameters:
-// s = the string to be split
-// c = the delimiter char
-
-// Returns:
-// 1. Array of new strings resulting from the split
-// 2. NULL if alloc fail 
-
 #include "libft.h"
-#include <stdio.h>
 
-// TODO: Free everything if we have a memory allocation error
+static int word_count(char const *s, char c);
+static char *fill_word(char *s, char c);
+void free_arr(char **arr, int i);
 
 int word_count(char const *s, char c)
 {
@@ -81,50 +70,40 @@ char *fill_word(char *s, char c)
     return(word);
 }
 
+void free_arr(char **arr, int i)
+{
+    while(i >= 0)
+    {
+        free(arr[i]);
+        i--;
+    }
+    free(arr);
+}
+
 char **ft_split(char const *s, char c)
 {
     char **arr;
     int i;
     char *temp_s;
-    int arr_len;
 
-    arr_len = word_count(s, c);
     temp_s = (char *)s;
-    arr = malloc((arr_len + 1) * sizeof(char *));
+    arr = malloc((word_count(s, c) + 1) * sizeof(char *));
     if(!arr)
         return(NULL);
     i = 0;
-    while(i < arr_len)
+    while(i < word_count(s, c))
     {
         while(*temp_s == c)
             temp_s++;
         arr[i] = fill_word(temp_s, c);
         if(!arr[i])
         {
-            while(i >= 0)
-            {
-                free(arr[i]);
-                i--;
-            }
-            free(arr);
+            free_arr(arr, i);
             return(NULL);
         }
         temp_s = temp_s + ft_strlen(arr[i]) + 1;
         i++;
     }
     arr[i] = NULL;
-     for (int i = 0; i <= word_count(s, c); i++) {
-         printf("Arr word [%d] = %s\n", i, arr[i]);
-     }
     return(arr);
-}
-
-int main()
-{
-    char *test_string = "  Hello,\tthis  is a test-string; for:ft_split! Let's see--how it handles   various\t\tseparators and     spaces.  ";
-    char delimiter = ' ';
-    printf("Word count = %d\n", word_count(test_string, delimiter));
-
-    ft_split(test_string, ' ');
-    return(0);
 }

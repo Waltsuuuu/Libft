@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 07:48:06 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/22 14:58:08 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/24 16:03:49 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define LIBFT_H
 
 #include <stdlib.h> //For size_t
+#include <limits.h>
 
 #define SIZE_MAX ((size_t) -1)  // This defines SIZE_MAX as the largest value representable by size_t
 
@@ -42,5 +43,7 @@ void    *ft_calloc(size_t nmemb, size_t size);
 char *ft_strdup(const char *s);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
+char **ft_split(char const *s, char c);
+char    *ft_itoa(int n);
 
 #endif 

@@ -31,7 +31,9 @@ SOURCES = \
 	ft_strdup.c \
 	ft_substr.c \
 	ft_strjoin.c \
-
+	ft_split.c \
+	ft_strmapi.c \
+	ft_striteri.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

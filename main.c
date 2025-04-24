@@ -3,6 +3,32 @@
 #include <ctype.h>
 #include <string.h>
 
+int word_count(char const *s, char c)
+{
+    int i;
+    int wc;
+
+    i = 0;
+    wc = 0;
+    while(s[i] == c)
+        i++;
+    while(s[i] != '\0')
+    {
+        if(s[i] == c)
+        {
+            while(s[i + 1] == c)
+                i++;
+            if(s[i + 1] == '\0')
+                break;
+            wc++;
+        }
+        i++;
+    }
+    if(wc >= 1)
+        wc++;
+    return(wc);
+}
+
 int main()
 {
 	// printf("\nft_isalpha = %d\n", ft_isalpha('a'));
@@ -133,5 +159,23 @@ int main()
     // char *trimmed = ft_strtrim(s1, set);
     // printf("%s", trimmed);
 
-	return 0;
+	//FT_SPLIT
+	// char *test_string = "abc-abc";
+    // char delimiter = '-';
+	// char **arr;
+    // arr = ft_split(test_string, delimiter);
+
+	// for (int i = 0; i <= word_count(test_string, delimiter); i++) {
+	// 	printf("Arr word [%d] = %s\n", i, arr[i]);
+	// }
+
+	// Test function to pass into strmapi
+	// char alt_case(unsigned int i, char c) {
+    // 	if (c >= 'a' && c <= 'z')
+    //     	c -= 32; // to upper
+    // 	if (i % 2 == 1 && c >= 'A' && c <= 'Z')
+    //     	c += 32; // back to lower on odd indices
+   	// 	return c;
+	// }
+ 	return 0;
 }

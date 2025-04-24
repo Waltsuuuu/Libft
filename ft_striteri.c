@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/17 11:40:18 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/24 11:07:01 by wheino           ###   ########.fr       */
+/*   Created: 2025/04/24 16:11:19 by wheino            #+#    #+#             */
+/*   Updated: 2025/04/24 16:18:19 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	i;
-	int	is_neg;
-	int	result;
+    int i;
 
-	i = 0;
-	is_neg = 0;
-	result = 0;
-	while (nptr[i] == ' ' || (nptr[i] <= 12 && nptr[i] >= 7))
-		i++;
-	if ((nptr[i] == '-') || (nptr[i] == '+'))
-	{
-		if (nptr[i] == '-')
-			is_neg++;
-		i++;
-	}
-	while (ft_isdigit(nptr[i]))
-	{
-		result = 10 * result + (nptr[i] - '0');
-		i++;
-	}
-	if (is_neg == 1)
-		return(result * -1);
-	return(result);
+    if(!s || !f)
+        return;
+    while(s[i] != '\0')
+    {
+        f(i, s[i]);
+        i++;
+    }
 }
