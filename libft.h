@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 07:48:06 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/24 16:03:49 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/25 14:57:23 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 #define LIBFT_H
 
 #include <stdlib.h> //For size_t
+#include <unistd.h> //For write
 #include <limits.h>
 
-#define SIZE_MAX ((size_t) -1)  // This defines SIZE_MAX as the largest value representable by size_t
+// #define SIZE_MAX ((size_t) -1)  // This defines SIZE_MAX as the largest value representable by size_t
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
@@ -45,5 +46,12 @@ char *ft_substr(char const *s, unsigned int start, size_t len);
 char *ft_strjoin(char const *s1, char const *s2);
 char **ft_split(char const *s, char c);
 char    *ft_itoa(int n);
+char *ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void ft_striteri(char *s, void (*f)(unsigned int, char*));
+void ft_putchar_fd(char c, int fd);
+void ft_putstr_fd(char *s, int fd);
+void    ft_putendl_fd(char *s, int fd);
+void    ft_putnbr_fd(int n, int fd);
+void    ft_putnbr_fd(int n, int fd);
 
 #endif 
