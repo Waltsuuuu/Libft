@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-04-17 07:53:41 by wheino            #+#    #+#             */
-/*   Updated: 2025-04-17 07:53:41 by wheino           ###   ########.fi       */
+/*   Updated: 2025/04/28 12:29:25 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == c)
-			return((char *)&s[i]);
+			return ((char *)&s[i]);
 		i--;
 	}
-	return(NULL);
+	return (NULL);
 }

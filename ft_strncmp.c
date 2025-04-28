@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-04-17 08:00:32 by wheino            #+#    #+#             */
-/*   Updated: 2025-04-17 08:00:32 by wheino           ###   ########.fi       */
+/*   Updated: 2025/04/28 12:27:21 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	while (s1[i] != '\0' && s2[i] != '\0' && i < (int)n)
 	{
 		if (!(s1[i] == s2[i]))
-			return(s1[i] - s2[i]);
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return(0);
+	return (0);
 }

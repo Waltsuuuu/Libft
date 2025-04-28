@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:40:18 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/24 11:07:01 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/28 11:07:32 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	ft_atoi(const char *nptr)
 		i++;
 	}
 	if (is_neg == 1)
-		return(result * -1);
-	return(result);
+		return (result * -1);
+	return (result);
 }

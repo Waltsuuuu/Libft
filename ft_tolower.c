@@ -6,14 +6,14 @@
 /*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-04-16 14:48:01 by wheino            #+#    #+#             */
-/*   Updated: 2025-04-16 14:48:01 by wheino           ###   ########.fi       */
+/*   Updated: 2025/04/28 12:33:54 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-		return(c + 32);
+		return (c + 32);
 	else
-		return(c);
+		return (c);
 }

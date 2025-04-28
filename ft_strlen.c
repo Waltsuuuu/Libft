@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025-04-15 09:43:46 by wheino            #+#    #+#             */
-/*   Updated: 2025-04-15 09:43:46 by wheino           ###   ########.fi       */
+/*   Updated: 2025/04/28 12:24:29 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@ size_t	ft_strlen(char *src)
 	i = 0;
 	while (src[i] != '\0')
 		i++;
-	return(i);
+	return (i);
 }
