@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wheino <wheino@student.hive.fi>            #+#  +:+       +#+        */
+/*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-04-15 09:43:46 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 12:24:29 by wheino           ###   ########.fr       */
+/*   Created: 2025/04/15 09:43:46 by wheino            #+#    #+#             */
+/*   Updated: 2025/04/28 22:04:15 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *src)
+size_t	ft_strlen(const char *src)
 {
 	int	i;
 

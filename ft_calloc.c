@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:10:20 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 16:02:26 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/28 22:25:25 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
 
-	if (nmemb == 0 || size == 0 || nmemb > SIZE_MAX / size)
-	{
+	if (size != 0 && nmemb != 0 && nmemb > SIZE_MAX / size)
 		return (NULL);
-	}
 	ptr = malloc(nmemb * size);
 	if (!ptr)
 		return (NULL);
