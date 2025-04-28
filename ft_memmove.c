@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 08:09:56 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 13:00:28 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/28 14:56:47 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	int					i;
+	int				i;
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
