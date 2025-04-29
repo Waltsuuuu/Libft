@@ -6,44 +6,39 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:13:22 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 12:15:31 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/29 15:34:05 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word_count(char const *s, char c)
+static unsigned int	word_count(char const *s, char c)
 {
-	int	i;
-	int	wc;
+	unsigned int	i;
+	unsigned int	wc;
 
 	i = 0;
 	wc = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i] != '\0')
+	while (s[i])
 	{
-		if (s[i] == c)
+		while (s[i] == c)
+			i++;
+		if (s[i])
 		{
-			while (s[i + 1] == c)
-				i++;
-			if (s[i + 1] == '\0')
-				break ;
 			wc++;
+			while (s[i] && s[i] != c)
+				i++;
 		}
-		i++;
 	}
-	if (wc >= 1)
-		wc++;
 	return (wc);
 }
 
 static char	*fill_word(char *s, char c)
 {
-	int		i;
-	int		start;
-	int		end;
-	char	*word;
+	int			i;
+	size_t		start;
+	size_t		end;
+	char		*word;
 
 	i = 0;
 	while (s[i] == c)
@@ -78,9 +73,9 @@ static void	free_arr(char **arr, int i)
 
 char	**ft_split(char const *s, char c)
 {
-	char	**arr;
-	int		i;
-	char	*temp_s;
+	char				**arr;
+	unsigned int		i;
+	char				*temp_s;
 
 	temp_s = (char *)s;
 	arr = malloc((word_count(s, c) + 1) * sizeof(char *));

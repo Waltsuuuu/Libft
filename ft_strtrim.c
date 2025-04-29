@@ -6,28 +6,16 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 16:11:11 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 12:31:55 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/29 15:33:04 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*trim_string(const char *s1, char *trim, int start, int end)
 {
-	int		start;
-	int		end;
-	char	*trim;
-	int		i;
+	int	i;
 
-	start = 0;
-	while (ft_strchr(set, s1[start]) != NULL)
-		start++;
-	end = ft_strlen((char *) s1);
-	while (ft_strchr(set, s1[end]) != NULL)
-		end--;
-	trim = malloc((end - start + 1) * sizeof(char));
-	if (!trim)
-		return (NULL);
 	i = 0;
 	while (start <= end)
 	{
@@ -35,5 +23,31 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		start++;
 	}
+	trim[i] = '\0';
+	return (trim);
+}
+
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	int		start;
+	int		end;
+	char	*trim;
+
+	start = 0;
+	if (s1 == NULL || set == NULL)
+		return (NULL);
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
+	while (ft_strchr(set, s1[start]) != NULL)
+		start++;
+	end = ft_strlen(s1) - 1;
+	while (ft_strchr(set, s1[end]) != NULL)
+		end--;
+	if (start > end)
+		return (ft_strdup(""));
+	trim = malloc((end - start + 2) * sizeof(char));
+	if (!trim)
+		return (NULL);
+	trim_string(s1, trim, start, end);
 	return (trim);
 }

@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:21 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 11:42:47 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/29 15:33:25 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,34 @@ static char	*rev_str(char *str)
 	return (str);
 }
 
+int	count_digits(int n)
+{
+	int	digits;
+
+	digits = 0;
+	if (n == INT_MIN)
+		return (10);
+	while (n > 9)
+	{
+		n = n / 10;
+		digits++;
+	}
+	if (n <= 9)
+	{
+		digits++;
+	}
+	return (digits);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*result;
 	int		i;
 	int		sign;
 
-	result = malloc(12 * sizeof(char));
 	i = 0;
 	sign = (n < 0);
+	result = malloc(count_digits(n) * sizeof(char) + sign + 1);
 	if (sign)
 		n = n * -1;
 	if (n == INT_MIN)

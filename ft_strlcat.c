@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 12:39:03 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 15:20:26 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/29 15:32:11 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	dst_len;
-	int	i;
+	int		i;
 
 	src_len = (size_t)ft_strlen((char *)src);
 	dst_len = (size_t)ft_strlen(dst);

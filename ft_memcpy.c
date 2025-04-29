@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 07:47:27 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 11:50:13 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/29 15:29:53 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char		*dest_str;
 	const unsigned char	*src_str;
-	int					i;
+	size_t				i;
 
 	dest_str = (unsigned char *)dest;
 	src_str = (const unsigned char *)src;
