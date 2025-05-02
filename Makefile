@@ -41,7 +41,20 @@ SOURCES = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 
-OBJECTS = $(SOURCES:.c=.o)
+BONUS_SOURCES = \
+	ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
+	ft_lstlast_bonus.c \
+	ft_lstadd_back_bonus.c \
+	ft_lstdelone_bonus.c \
+	ft_lstclear_bonus.c \
+	ft_lstiter_bonus.c \
+	ft_lstmap_bonus.c \
+
+OBJECTS = $(SOURCES:.c=.o) 
+
+BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 
 all: $(LIB_NAME)
 
@@ -51,12 +64,15 @@ $(LIB_NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+bonus: $(BONUS_OBJECTS)
+	   $(AR) $(ARFLAGS) $(LIB_NAME) $(BONUS_OBJECTS)
+
 clean:
-	rm -rf $(OBJECTS)
+	rm -rf $(OBJECTS) $(BONUS_OBJECTS)
 
 fclean:
-	rm -rf $(OBJECTS) $(LIB_NAME)
+	rm -rf $(OBJECTS) $(BONUS_OBJECTS) $(LIB_NAME) 
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
