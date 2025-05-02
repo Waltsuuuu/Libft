@@ -6,11 +6,21 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:38:34 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 12:26:49 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/02 22:06:49 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+ 
+/**
+ * @brief Applies the function f to each character of the string s,
+ *        passing its index as the first argument.
+ *        The result is stored in a new string, which is returned.
+ * @param s: The string to iterate over.
+ * @param f: The function to apply to each character.
+ * @return A new string resulting from the successive applications of f.
+ *         Returns NULL if the allocation fails or if s or f is NULL.
+ */
 
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {

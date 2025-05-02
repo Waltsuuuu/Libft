@@ -6,11 +6,21 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 08:09:56 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/29 15:30:14 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/30 13:15:31 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * @brief Copies n bytes from memory area src to memory area dest.
+ *        The memory areas may overlap.
+ * @param dest: Pointer to the destination memory area.
+ * @param src: Pointer to the source memory area.
+ * @param n: Number of bytes to copy.
+ * @return Pointer to the destination memory area dest.
+ *         If n is zero, the function returns dest.
+ */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

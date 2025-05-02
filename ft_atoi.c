@@ -6,11 +6,17 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 11:40:18 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 15:57:31 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/30 11:19:30 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * @brief Converts a string to an integer.
+ * @param nptr: The string to convert to an integer.
+ * @return The converted integer.
+ */
 
 int	ft_atoi(const char *nptr)
 {

@@ -6,11 +6,17 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:21 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/29 15:33:25 by wheino           ###   ########.fr       */
+/*   Updated: 2025/04/30 12:00:26 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * @brief Converts an integer to a string representation.
+ * @param n: The integer to convert.
+ * @return A pointer to the string representation of the integer.
+ */
 
 static char	*ft_strcpy(char *dest, char *src)
 {

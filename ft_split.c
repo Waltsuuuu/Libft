@@ -6,11 +6,22 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 10:13:22 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/29 15:34:05 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/01 22:38:10 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/**
+ * * @brief Splits a string into an array of strings based on a delimiter.
+ * * @param s: The string to split.
+ * * @param c: The delimiter character.
+ * * @return A pointer to the array of strings, or NULL if the allocation fails.
+ * *         The last element of the array is NULL.
+ * *         If the input string is NULL or empty, the function returns NULL.
+ * *         The caller is responsible for freeing the memory allocated for the
+ * *         array and its elements.
+ */
 
 static unsigned int	word_count(char const *s, char c)
 {

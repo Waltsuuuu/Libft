@@ -6,11 +6,19 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 11:10:39 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/28 12:00:43 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/01 20:58:34 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h"¨
+
+/**
+ * @brief Writes the integer n to the file descriptor fd.
+ * @param n: The integer to write.
+ * @param fd: The file descriptor to write to.
+ * @return None.
+ *         If fd is not valid, the function does nothing.
+ */
 
 void	ft_putnbr_fd(int n, int fd)
 {
