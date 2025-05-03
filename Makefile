@@ -59,7 +59,7 @@ BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 all: $(LIB_NAME)
 
 $(LIB_NAME): $(OBJECTS)
-	$(AR) $(ARFLAGS) $@ $^
+	$(AR) $(ARFLAGS) $(LIB_NAME) $(OBJECTS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
