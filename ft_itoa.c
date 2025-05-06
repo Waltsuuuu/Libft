@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:21 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/30 12:00:26 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/06 11:29:21 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,22 +79,21 @@ char	*ft_itoa(int n)
 	i = 0;
 	sign = (n < 0);
 	result = malloc(count_digits(n) * sizeof(char) + sign + 1);
-	if (sign)
-		n = n * -1;
 	if (n == INT_MIN)
 	{
 		result = ft_strcpy(result, "-2147483648");
 		return (result);
 	}
+	if (sign)
+		n = n * -1;
 	while (n > 9)
 	{
 		result[i++] = (n % 10) + '0';
 		n = n / 10;
 	}
-	if (n < 9)
-		result[i] = n + '0';
+	result[i++] = n + '0';
 	if (sign == 1)
-		result[++i] = '-';
-	result[++i] = '\0';
+		result[i++] = '-';
+	result[i] = '\0';
 	return (rev_str(result));
 }

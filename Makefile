@@ -64,8 +64,11 @@ $(LIB_NAME): $(OBJECTS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-bonus: $(BONUS_OBJECTS)
-	   $(AR) $(ARFLAGS) $(LIB_NAME) $(BONUS_OBJECTS)
+bonus: .bonus
+
+.bonus: $(BONUS_OBJECTS)
+	$(AR) $(ARFLAGS) $(LIB_NAME) $(BONUS_OBJECTS)
+	touch .bonus
 
 clean:
 	rm -rf $(OBJECTS) $(BONUS_OBJECTS)
