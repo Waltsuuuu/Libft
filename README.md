@@ -96,7 +96,10 @@ To compile the library, use the provided `Makefile`<br>
 ### 4. Using Libft in your project
 
 Include the header file `#include "Libft.h"` in your code<br><br>
-When compiling your program, link the `libft.a` library using the `-L`and `-l`flags.<br>
-Ex. `gcc main.c -L. -lft -o <progam_name>`
+When compiling your program, link the `libft.a` library using the, `-I` `-L`and `-l`flags.<br>
+Ex. `gcc main.c -I./Libft -L./Libft -lft -o <progam_name>` <br>
+`-I` Tells the compiler where to find the header <br>
+`-L` Tells the linker where to find the library <br>
+`-lft` Links with `libft.a`
 
 
