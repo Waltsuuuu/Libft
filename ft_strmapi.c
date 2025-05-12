@@ -6,12 +6,12 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 15:38:34 by wheino            #+#    #+#             */
-/*   Updated: 2025/05/02 22:06:49 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/12 12:26:51 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
+
 /**
  * @brief Applies the function f to each character of the string s,
  *        passing its index as the first argument.

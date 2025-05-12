@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:02:10 by wheino            #+#    #+#             */
-/*   Updated: 2025/05/02 23:08:24 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/12 12:29:30 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,14 @@
 
 /**
  * @brief Extracts a substring from a given string.
- *
- * Allocates and returns a new string, which is a substring of `s`. The
- * substring begins at index `start` and is of maximum length `len`.
- * If `start` is greater than the length of `s`, an empty string is returned.
- * If `len` goes beyond the end of `s`, the substring is truncated appropriately.
+ * Allocates and returns a new string.
  *
  * @param s The source string to extract from.
  * @param start The starting index from which to begin extraction.
  * @param len The maximum number of characters to include in the substring.
  *
- * @return A newly allocated substring, or NULL if allocation fails or `s` is NULL.
+ * @return A newly allocated substring
+ * or NULL if allocation fails or `s` is NULL.
  */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 12:39:03 by wheino            #+#    #+#             */
-/*   Updated: 2025/05/02 21:13:47 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/12 12:26:37 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 /**
  * @brief Appends the string src to the end of dst. It will append at most
- * 		  dstsize - strlen(dst) - 1 characters from src, and null-terminate the result.
+ * 		  dstsize - strlen(dst) - 1 characters from src, and null-terminate
+ * 		  the result.
  * @param dst: The destination string to which src is appended.
  * @param src: The source string to append to dst.
  * @param dstsize: The size of the destination buffer.
