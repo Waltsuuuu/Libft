@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 09:43:46 by wheino            #+#    #+#             */
-/*   Updated: 2025/05/02 22:04:23 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/27 15:01:38 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlen(const char *src)
 {
 	int	i;
 
+	if (!src)
+		return (0);
 	i = 0;
 	while (src[i] != '\0')
 		i++;
