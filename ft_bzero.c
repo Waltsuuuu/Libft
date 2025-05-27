@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/16 06:35:28 by wheino            #+#    #+#             */
-/*   Updated: 2025/04/30 11:18:18 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/27 15:11:01 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ void	*ft_bzero(void *s, size_t n)
 {
 	unsigned char	*ptr;
 
+	if (!s)
+		return (NULL);
 	ptr = (unsigned char *)s;
 	while (n--)
 		*ptr++ = 0;
