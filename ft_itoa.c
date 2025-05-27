@@ -6,7 +6,7 @@
 /*   By: wheino <wheino@student.hive.fi>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 11:09:21 by wheino            #+#    #+#             */
-/*   Updated: 2025/05/06 11:29:21 by wheino           ###   ########.fr       */
+/*   Updated: 2025/05/27 15:14:52 by wheino           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ static char	*ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
+	if (!dest || !src)
+		return (NULL);
 	i = 0;
 	while (src[i] != '\0')
 	{
