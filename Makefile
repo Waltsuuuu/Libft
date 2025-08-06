@@ -48,23 +48,29 @@ SOURCES = \
 	linked_list/ft_lstdelone_bonus.c \
 	linked_list/ft_lstclear_bonus.c \
 	linked_list/ft_lstiter_bonus.c \
-	linked_list/ft_lstmap_bonus.c \
+	linked_list/ft_lstmap_bonus.c 
 
 OBJECTS = $(SOURCES:.c=.o) 
 
 all: $(LIB_NAME)
 
-$(LIB_NAME): $(OBJECTS)
-	$(AR) $(ARFLAGS) $(LIB_NAME) $(OBJECTS)
+$(LIB_NAME): pre $(OBJECTS)
+	@$(AR) $(ARFLAGS) $(LIB_NAME) $(OBJECTS)
+	@echo "Libft compiled successfully!"
+
+pre: 
+	@echo "Compiling..."
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf $(OBJECTS)
+	@rm -rf $(OBJECTS)
+	@echo "Removed Libft .o files."
 
-fclean:
-	rm -rf $(OBJECTS) $(LIB_NAME)
+fclean: clean
+	@rm -rf $(LIB_NAME)
+	@echo "Removed Libft library."
 
 re: fclean all
 
