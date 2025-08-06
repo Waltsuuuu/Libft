@@ -16,8 +16,10 @@ This library will be used in later projects, such as `printf`, `get_next_line`, 
 
 ## What’s Included
 
-### **String Manipulation**
+### **String functions**
 
+- `ft_atoi` – Converts a string to an integer
+- `ft_itoa` – Converts an integer to a string
 - `ft_strlen` – Returns the length of a string
 - `ft_strlcpy` – Copies a string with size limitation
 - `ft_strlcat` – Concatenates two strings with size limitation
@@ -29,20 +31,15 @@ This library will be used in later projects, such as `printf`, `get_next_line`, 
 - `ft_strjoin` – Joins two strings into a new string
 - `ft_strtrim` – Trims characters from the start and end of a string
 - `ft_split` – Splits a string into an array of strings
-- `ft_itoa` – Converts an integer to a string
 - `ft_strmapi` – Applies a function to each character of a string and returns a new string
 - `ft_striteri` – Applies a function to each character of a string (in-place)
+- `ft_putchar_fd` – Writes a character to a file descriptor
+- `ft_putstr_fd` – Writes a string to a file descriptor
+- `ft_putendl_fd` – Writes a string followed by a newline to a file descriptor
+- `ft_putnbr_fd` – Writes an integer to a file descriptor
 
-### **Memory Management**
+- ### **Character functions**
 
-- `ft_memset` – Sets a block of memory to a specified value
-- `ft_bzero` – Clears a block of memory
-- `ft_memcpy` – Copies a block of memory
-- `ft_memmove` – Moves a block of memory
-- `ft_memchr` – Searches for a character in a memory block
-- `ft_memcmp` – Compares two memory blocks
-- `ft_calloc` – Allocates memory and initializes it to zero
-- `ft_atoi` – Converts a string to an integer
 - `ft_isalpha` – Checks if a character is alphabetic
 - `ft_isdigit` – Checks if a character is a digit
 - `ft_isalnum` – Checks if a character is alphanumeric
@@ -51,14 +48,17 @@ This library will be used in later projects, such as `printf`, `get_next_line`, 
 - `ft_toupper` – Converts a character to uppercase
 - `ft_tolower` – Converts a character to lowercase
 
-### **File I/O**
+### **Memory functions**
 
-- `ft_putchar_fd` – Writes a character to a file descriptor
-- `ft_putstr_fd` – Writes a string to a file descriptor
-- `ft_putendl_fd` – Writes a string followed by a newline to a file descriptor
-- `ft_putnbr_fd` – Writes an integer to a file descriptor
+- `ft_memset` – Sets a block of memory to a specified value
+- `ft_bzero` – Clears a block of memory
+- `ft_memcpy` – Copies a block of memory
+- `ft_memmove` – Moves a block of memory
+- `ft_memchr` – Searches for a character in a memory block
+- `ft_memcmp` – Compares two memory blocks
+- `ft_calloc` – Allocates memory and initializes it to zero
 
-### **Linked Lists**
+### **Linked Lists functions**
 
 - `ft_lstnew` – Creates a new linked list node
 - `ft_lstadd_front` – Adds a node to the front of the list
@@ -84,8 +84,7 @@ cd libft
 ### 2. Compile the library
 
 To compile the library, use the provided `Makefile`<br>
-- `make` Compiles the library (*Does not include Linked List functions*)<br>
-- `make bonus`Compiles the Linked List functions.
+- `make` Compiles the library<br>
 
 ### 3. Clean and Rebuild
 
@@ -96,10 +95,6 @@ To compile the library, use the provided `Makefile`<br>
 ### 4. Using Libft in your project
 
 Include the header file `#include "Libft.h"` in your code<br><br>
-When compiling your program, link the `libft.a` library using the, `-I` `-L`and `-l`flags.<br>
-Ex. `gcc main.c -I./Libft -L./Libft -lft -o <progam_name>` <br>
-`-I` Tells the compiler where to find the header <br>
-`-L` Tells the linker where to find the library <br>
-`-lft` Links with `libft.a`
+
 
 
