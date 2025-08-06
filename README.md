@@ -4,16 +4,6 @@ Libft is a custom C library that reimplements a set of standard C library functi
 
 This is the first project in the common core of Hive and serves as the foundation for working with memory management, strings, and abstract data types in C. All code adheres to the strict 42 Network coding standard (*The Norm*). 
 
-This library will be used in later projects, such as `printf`, `get_next_line`, and more, providing essential functionality for more advanced tasks.
-
-## Project Goals
-
-- Reimplement core functions from the C standard library
-- Deepen understanding of memory management, pointers, and string handling
-- Learn to build, organize, and maintain a personal utility library in C
-- Practice implementing and manipulating linked lists
-- Write clean, maintainable code under strict project constraints
-
 ## What’s Included
 
 ### **String functions**
