@@ -28,7 +28,7 @@ This is the first project in the common core of Hive and serves as the foundatio
 - `ft_putendl_fd` – Writes a string followed by a newline to a file descriptor
 - `ft_putnbr_fd` – Writes an integer to a file descriptor
 
-- ### **Character functions**
+### **Character functions**
 
 - `ft_isalpha` – Checks if a character is alphabetic
 - `ft_isdigit` – Checks if a character is a digit
